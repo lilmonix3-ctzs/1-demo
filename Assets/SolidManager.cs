@@ -20,7 +20,8 @@ public class SolidManager : MonoBehaviour
 
     void GenerateGrid()
     {
-        for (int j = 0; j < height; j++)
+        int sortorder = 0;
+        for (int j = 0; j < height; j++,sortorder++)
         {
             
             for (int i = 0; i < j + 1; i++)
@@ -34,34 +35,56 @@ public class SolidManager : MonoBehaviour
 
                 int randomType = Random.Range(0, solid.Images.Count);
                 solid.SetType(randomType);
-                solid.GetComponent<SpriteRenderer>().sortingOrder = j;
+                solid.GetComponent<SpriteRenderer>().sortingOrder = sortorder;
             }
 
             positionx = -0.16f * (j + 1);
             positiony -= 0.18f;
         }
-        positionx = -0.16f * 20;
-        positiony = -0.18f * 20;
-        //for (int j = 0;j < width; j++)
-        //{
-        //    for(int i = 0;i < width; i++)
-        //    {
-        //        GameObject solidObj = Instantiate(solidPrefab);
-        //        solidObj.transform.position = new Vector2(positionx, positiony);
+        positionx = -0.16f * width;
+        positiony = -0.18f * height;
+        for (int j = 0; j < width; j++, sortorder++)
+        {
+            for (int i = 0; i < width; i++)
+            {
+                GameObject solidObj = Instantiate(solidPrefab);
+                solidObj.transform.position = new Vector2(positionx, positiony);
 
-        //        positionx += 0.32f;
+                positionx += 0.32f;
 
-        //        Solid solid = solidObj.GetComponent<Solid>();
+                Solid solid = solidObj.GetComponent<Solid>();
 
-        //        int randomType = Random.Range(0, solid.Images.Count);
-        //        solid.SetType(randomType);
-        //        solid.GetComponent<SpriteRenderer>().sortingOrder = j;
+                int randomType = Random.Range(0, solid.Images.Count);
+                solid.SetType(randomType);
+                solid.GetComponent<SpriteRenderer>().sortingOrder = sortorder;
 
-        //    }
-        //    positionx = -0.16f * 20;
-        //    positiony -= 0.18f;
-        //}
+            }
+            if (j % 2 == 0)
+                positionx = -0.16f * (width + 1);
+            else
+                positionx = -0.16f * height;
+            positiony -= 0.18f;
+        }
+        positionx = 0.16f * (width - 2);
+        for (int j = 0; j < height; j++, sortorder++)
+        {
+            
+            for (int i = 0; i < width - j; i++)
+            {
+                GameObject solidObj = Instantiate(solidPrefab);
+                solidObj.transform.position = new Vector2(positionx, positiony);
 
+                positionx -= 0.32f;
+
+                Solid solid = solidObj.GetComponent<Solid>();
+
+                int randomType = Random.Range(0, solid.Images.Count);
+                solid.SetType(randomType);
+                solid.GetComponent<SpriteRenderer>().sortingOrder = sortorder;
+            }
+            positionx = 0.16f * (width - 3 - j);
+            positiony -= 0.18f;
+        }
 
     }
 
