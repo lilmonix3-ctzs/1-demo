@@ -11,8 +11,8 @@ public class PlayerMoving : MonoBehaviour
 
     private void Start()
     {
-        transform.position = new Vector3(0, 0.1f, 0);
-        targetPosition = transform.position; // 初始化目标位置
+        //transform.position = new Vector3(0, 0.1f, 0);
+        //targetPosition = transform.position; // 初始化目标位置
     }
 
     private void Update()
