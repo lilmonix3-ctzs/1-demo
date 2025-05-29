@@ -13,10 +13,10 @@ public class Solid : MonoBehaviour
     {
         switch (type)
         {
-            case 0:
-                Type = type;
-                img.sprite = Images[type];
-                break;
+            //case 0:
+            //    Type = type;
+            //    img.sprite = Images[type];
+            //    break;
             case 1:
                 Type = type;
                 img.sprite = Images[type];
@@ -25,27 +25,29 @@ public class Solid : MonoBehaviour
                 Type = type;
                 img.sprite = Images[type];
                 break;
-            case 3:
-                Type = type;
-                img.sprite = Images[type];
-                break;
-            case 4:
-                Type = type;
-                img.sprite = Images[type];
-                break;
-            case 5:
-                Type = type;
-                img.sprite = Images[type];
-                break;
+            //case 3:
+            //    Type = type;
+            //    img.sprite = Images[type];
+            //    break;
+            //case 4:
+            //    Type = type;
+            //    img.sprite = Images[type];
+            //    break;
+            //case 5:
+            //    Type = type;
+            //    img.sprite = Images[type];
+            //    break;
             case 6:
                 Type = type;
                 img.sprite = Images[type];
                 break;
-            case 7:
-                Type = type;
-                img.sprite = Images[type];
-                break;
+            //case 7:
+            //    Type = type;
+            //    img.sprite = Images[type];
+            //    break;
             default:
+                Type = 2;
+                img.sprite = Images[2];
                 break;
         }
         
