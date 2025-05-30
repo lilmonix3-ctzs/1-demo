@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a79bf55450e04a4ebddb5fad8ed4b50, type: 3}
+  m_Name: CardOne
+  m_EditorClassIdentifier: 
+  Card_Text: "\u9020\u62103\u70B9\u4F24\u5BB3"
+  Card_Cost: 1
+  Card_Level: 1
+  Card_Name: "\u706B\u7403\u672F"
+  Card_Back: {fileID: 2689669376687705436, guid: a88e167d7d015e841801025e5b8f4210, type: 3}
+  Card_NameBack: {fileID: 4059038994389111978, guid: a88e167d7d015e841801025e5b8f4210, type: 3}
+  Card_LevelBack: {fileID: 7681009081661902697, guid: a88e167d7d015e841801025e5b8f4210, type: 3}
+  Card_CostBack: {fileID: -2769026231634236444, guid: a88e167d7d015e841801025e5b8f4210, type: 3}
+  Card_TextBack: {fileID: 661494202555500142, guid: a88e167d7d015e841801025e5b8f4210, type: 3}
+  Card_Art: {fileID: -9026615604156508812, guid: 88fb66adc20350a408ad4365ea86f5e8, type: 3}
+  Card_Frame: {fileID: 7158477380871363687, guid: a88e167d7d015e841801025e5b8f4210, type: 3}
